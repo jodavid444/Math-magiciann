@@ -2,8 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #2f2f2f;
-  color: #f5903f;
+  color: #333;
   margin: 0;
 }
 
@@ -17,6 +16,9 @@ header {
   margin-bottom: 30px;
   background-color: #413f3f;
   padding: 5px 0;
+  color: white;
+  height: 90px;
+  align-items: center;
 }
 
 nav {
@@ -37,11 +39,10 @@ nav {
 
 .active {
   color: #fd7200 !important;
-  border-bottom: 1px solid #f5903f !important;
 }
 
 .nav-link a {
-  color: #f5903f;
+  color: white;
   text-decoration: none;
   font-weight: 500;
   padding-bottom: 5px;
@@ -50,7 +51,6 @@ nav {
 }
 
 .nav-link a:hover {
-  border-bottom: 1px solid #f5903f;
   color: #fd7200;
 }
 
