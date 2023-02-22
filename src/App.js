@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Calculator from './components/Calculator';
+import Calculator from './components/calculator';
 import Home from './components/Home';
 import Navigation from './components/Navigation';
 import Quote from './components/Quote';
@@ -33,4 +33,3 @@ export default class App extends Component {
     );
   }
 }
-
