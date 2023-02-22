@@ -1,24 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Playfair+Display&family=Poppins:wght@200;300;400;500;700&display=swap');
+
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #2f2f2f;
+  color: #f5903f;
+  margin: 0;
 }
 
-.button-container {
+h1 {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  background-color: #413f3f;
+  padding: 5px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.active {
+  color: #fd7200 !important;
+  border-bottom: 1px solid #f5903f !important;
+}
+
+.nav-link a {
+  color: #f5903f;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 5px;
+  transition: 0.5s;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link a:hover {
+  border-bottom: 1px solid #f5903f;
+  color: #fd7200;
+}
+
+.calculator-cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.home-container {
+  margin: 50px;
+}
+
+.quote-container {
+  margin: 100px 50px;
+  text-align: center;
+}
+
+.buttons-cont {
   display: grid;
   grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  width: 400px;
+  height: 400px;
 }
 
 .calc-section {
   text-align: right;
-  background-color: #858693;
-  padding: 25px 10px 0 0;
+  background-color: #5a5a5a;
+  padding: 20px 10px 0 0;
   color: white;
-  border: 1px solid #d1d1d1;
+  border: 1px solid #fd7200;
+  font-family: 'Poppins', sans-serif;
 }
 
-.button-container-row {
+.container-row {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
@@ -28,40 +95,75 @@ body {
   grid-template-columns: 50% 25% 25%;
 }
 
-.orange-button {
+.button-orange {
   background-color: #f5903f;
-  border: 1px solid #d1d1d1;
+  border: 1px;
+  border-bottom: 1px solid #413f3f;
+  border-left: 1px solid #413f3f;
+  border-right: 1px solid #f5903f;
   cursor: pointer;
-  padding: 30px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
 }
 
-.orange-button:hover {
-  background-color: #fc7b12;
+.calculator-last-orange-btn {
+  border-bottom: none;
 }
 
-.orange-button:active {
-  background-color: rgb(255, 115, 0);
+.button-orange:hover {
+  background-color: rgb(248, 131, 35);
 }
 
-.gray-button {
+.button-orange:active {
+  background-color: #fd7200;
+}
+
+.button-grey {
   background-color: #e1e1e0;
-  border: 1px solid #d1d1d1;
+  border: 1px solid #fd7200;
   cursor: pointer;
   transition: 0.3s;
-  padding: 30px 50px;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.gray-button:hover {
+.button-grey:hover {
   background-color: #d6d6d6;
 }
 
-.gray-button:active {
+.button-grey:active {
   background-color: #afafaf;
+}
+
+.animation-h3 {
+  width: 12.3em;
+}
+
+.calculator-h3 {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  height: 30px;
+}
+
+.anim-typewriter {
+  animation:
+    typewriter 1.5s steps(22) 0.3s 1 normal both,
+    blinkTextCursor 500ms steps(22) infinite normal;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 10.3em; }
+}
+
+@keyframes blinkTextCursor {
+  from { border-right-color: rgba(255, 255, 255, 0.75); }
+  to { border-right-color: transparent; }
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
@@ -9,50 +8,53 @@ const Calculator = () => {
     setState(calculate(state, element.target.textContent));
   };
 
-  const { next } = state;
-  const { total } = state;
+  const { total, next } = state;
 
   return (
-
-    <div className="button-container">
-      <div className="calc-section">{next || total || 0}</div>
-      <div className="grid-container">
-        <div className="button-container-row">
-          <button type="button" onClick={buttonClick} className="gray-button">AC</button>
-          <button type="button" onClick={buttonClick} className="gray-button">+/-</button>
-          <button type="button" onClick={buttonClick} className="gray-button">%</button>
-          <button type="button" onClick={buttonClick} className="orange-button">÷</button>
+    <div className="calculator-cont">
+      <div className="animation-h3">
+        <h3 className="calculator-h3 anim-typewriter">
+          {'Let\'s do some math!'}
+        </h3>
+      </div>
+      <div className="buttons-cont">
+        <div className="calc-section">{next || total || 0}</div>
+        <div className="container-row">
+          <button type="button" onClick={buttonClick} className="button-grey">AC</button>
+          <button type="button" onClick={buttonClick} className="button-grey">+/-</button>
+          <button type="button" onClick={buttonClick} className="button-grey">%</button>
+          <button type="button" onClick={buttonClick} className="button-orange">÷</button>
         </div>
 
-        <div className="button-container-row">
-          <button type="button" onClick={buttonClick} className="gray-button">7</button>
-          <button type="button" onClick={buttonClick} className="gray-button">8</button>
-          <button type="button" onClick={buttonClick} className="gray-button">9</button>
-          <button type="button" onClick={buttonClick} className="orange-button">x</button>
+        <div className="container-row">
+          <button type="button" onClick={buttonClick} className="button-grey">7</button>
+          <button type="button" onClick={buttonClick} className="button-grey">8</button>
+          <button type="button" onClick={buttonClick} className="button-grey">9</button>
+          <button type="button" onClick={buttonClick} className="button-orange">x</button>
         </div>
 
-        <div className="button-container-row">
-          <button type="button" onClick={buttonClick} className="gray-button">4</button>
-          <button type="button" onClick={buttonClick} className="gray-button">5</button>
-          <button type="button" onClick={buttonClick} className="gray-button">6</button>
-          <button type="button" onClick={buttonClick} className="orange-button">-</button>
+        <div className="container-row">
+          <button type="button" onClick={buttonClick} className="button-grey">4</button>
+          <button type="button" onClick={buttonClick} className="button-grey">5</button>
+          <button type="button" onClick={buttonClick} className="button-grey">6</button>
+          <button type="button" onClick={buttonClick} className="button-orange">-</button>
         </div>
 
-        <div className="button-container-row">
-          <button type="button" onClick={buttonClick} className="gray-button">1</button>
-          <button type="button" onClick={buttonClick} className="gray-button">2</button>
-          <button type="button" onClick={buttonClick} className="gray-button">3</button>
-          <button type="button" onClick={buttonClick} className="orange-button">+</button>
+        <div className="container-row">
+          <button type="button" onClick={buttonClick} className="button-grey">1</button>
+          <button type="button" onClick={buttonClick} className="button-grey">2</button>
+          <button type="button" onClick={buttonClick} className="button-grey">3</button>
+          <button type="button" onClick={buttonClick} className="button-orange">+</button>
         </div>
 
         <div className="third-row-bottom">
-          <button type="button" onClick={buttonClick} className="gray-button">0</button>
-          <button type="button" onClick={buttonClick} className="gray-button">.</button>
-          <button type="button" onClick={buttonClick} className="orange-button">=</button>
+          <button type="button" onClick={buttonClick} className="button-grey">0</button>
+          <button type="button" onClick={buttonClick} className="button-grey">.</button>
+          <button type="button" onClick={buttonClick} className="button-orange calculator-last-orange-btn">=</button>
         </div>
       </div>
-
     </div>
   );
 };
+
 export default Calculator;
